@@ -4,7 +4,8 @@
 # http://en.wikipedia.org/wiki/Software_versioning
 
 # check we have called the script with valid parameters
-if [ ! $# == 1 ]; then
+if [ $# -eq 0 ]
+  then
   echo "Usage: '$0 (major|minor|revision)' - increment the github tag according to the release type"
   exit
 fi
